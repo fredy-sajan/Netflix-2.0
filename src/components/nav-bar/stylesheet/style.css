@@ -1,0 +1,38 @@
+.nav_bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  padding: 20px;
+  z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+.nav_bar.nav_background_color {
+  background-color: black;
+}
+.nav_bar .nav_contents {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_bar .nav_contents .netflix_logo_div .netflix_logo {
+  position: fixed;
+  top: 19px;
+  left: 0;
+  width: 210px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.nav_bar .nav_contents .netflix_avatar_logo_div .netflix_avatar_logo {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
