@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 // Component import
-import NavBar from '../../components/nav-bar'
+import NavBar from '../../components/nav-bar';
+import Banner from '../../components/home-screen/banner/index';
 
 function HomeScreen() {
   return (
@@ -9,9 +10,9 @@ function HomeScreen() {
 
         <NavBar />
         
-        {/* Banner */}
+        <Banner />
 
-        {/* Row */}
+        
         
     </div>
   )
