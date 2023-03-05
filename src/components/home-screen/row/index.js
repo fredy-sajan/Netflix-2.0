@@ -33,10 +33,14 @@ function Row({ title, fetchUrl, isLargeRow = false, img_base_url }) {
                 {
                     movies && movies.map((movie) => {
                         return (
-                            <img className={`row_poster ${isLargeRow && "row_posterLarge"}`}
-                                src={`${img_base_url}${isLargeRow ? movie?.poster_path :
-                                movie?.backdrop_path}`} alt="movie-name" key={movie.id}
-                            />
+                            <div style={{margin: "0", padding: "0"}}>
+                                <img className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+                                    src={`${img_base_url}${isLargeRow ? movie?.poster_path :
+                                        movie?.backdrop_path}`} alt="movie-name" key={movie.id}
+                                />
+                                {!isLargeRow ? <h3 className='movie_title_name'>{movie ? movie?.title || movie?.name || movie?.original_name : 'Error 404 Data Not Found' }</h3> : null}
+                            </div>
+
                         )
                     })
                 }

@@ -1,8 +1,8 @@
 .row {
   position: relative;
   z-index: 6;
-  margin: 40px 0 40px 40px;
-  padding-right: 40px;
+  margin: 40px 0 40px 0;
+  padding: 0 40px;
 }
 .row h2 {
   font-size: 20px;
@@ -14,7 +14,7 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  padding: 20px;
+  padding-top: 20px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -22,12 +22,11 @@
   display: none;
 }
 .row .row_posters .row_poster {
-  width: 22vw;
   max-height: 168px;
   height: 12.36120401vw;
+  padding-right: 20px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-right: 10px;
   transition: transform 450ms;
 }
 .row .row_posters .row_poster:hover {
@@ -35,9 +34,23 @@
   opacity: 1;
 }
 .row .row_posters .row_posterLarge {
-  max-height: 199px;
+  width: 220px;
+  height: 300px;
+  max-height: unset;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-right: 20px;
 }
 .row .row_posters .row_posterLarge:hover {
   transform: scale(1.09);
   opacity: 1;
+}
+.row .row_posters .movie_title_name {
+  color: #fff;
+  max-width: 300px;
+  word-wrap: break-word;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
