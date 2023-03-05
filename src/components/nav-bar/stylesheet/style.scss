@@ -4,7 +4,7 @@
     width: 100%;
     height: 90px;
     padding: 20px;
-    z-index: 1;
+    z-index: 999;
 
     // Animations
     transition-timing-function: ease-in;
@@ -16,10 +16,9 @@
 
     .nav_contents{
         width: 100%;
-        height: 100%;
-        position: fixed;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
 
         .netflix_logo_div{
@@ -28,9 +27,9 @@
                 position: fixed;
                 top: 19px;
                 left: 0;
-                width: 210px;
+                width: 199px;
                 object-fit: contain;
-                padding-left: 20px;
+                padding-left: 40px;
                 cursor: pointer;
             }
 
@@ -41,7 +40,7 @@
             .netflix_avatar_logo{
                 position: fixed;
                 top: 25px;
-                right: 20px;
+                right: 40px;
                 width: 38px;
                 height: 38px;
                 cursor: pointer;

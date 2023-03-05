@@ -9,6 +9,8 @@ import requests from '../../../setup-app/the-movie-db/requests';
 // CSS import
 import './stylesheet/style.css'
 
+import errorImage from '../../../assets/images/404-error/404-pages.jpg'
+
 
 
 function Banner() {
@@ -33,7 +35,7 @@ function Banner() {
     fetchMovies();
   }, []);
 
-  console.log(`movies ${movies?.name}`)
+  const img_base_url = "https://image.tmdb.org/t/p/original/"
 
 
   // Truncate description
@@ -44,14 +46,14 @@ function Banner() {
   return (
     <header className='banner' style={{
       backgroundSize: "cover",
-      backgroundImage: `url("https://image.tmdb.org/t/p/original/${movies?.backdrop_path}")`,
+      backgroundImage: movies ? `url("${img_base_url}${movies?.backdrop_path}")` : `url(${errorImage})`,
       backgroundPosition: "center center",
     }}>
 
       <div className="banner_contents">
 
         <h1 className="banner_title">
-          {movies?.title || movies?.name || movies?.original_name}
+          {movies ? movies?.title || movies?.name || movies?.original_name : "Error 404  Data Not Found"}
         </h1>
 
         <div className="banner_buttons">
@@ -60,7 +62,7 @@ function Banner() {
         </div>
 
         <h1 className="banner_description">
-          {truncate(movies?.overview, 140)}
+          {truncate( movies ? movies.overview : "Error 404", 140)}
         </h1>
 
       </div>
