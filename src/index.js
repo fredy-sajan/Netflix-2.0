@@ -5,14 +5,21 @@ import { store } from './app/store';
 import App from './App';
 import './index.css';
 
+// Contexts import
+
+// signin state manager for login and signin setup
+import SignInStateManager from './setup-app/context/login-screen/signin-button-state-context';
+
 const container = document.getElementById('root');
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <SignInStateManager>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </SignInStateManager>
   </React.StrictMode>
 );
 
