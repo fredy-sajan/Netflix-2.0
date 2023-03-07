@@ -5,8 +5,10 @@ import { store } from './app/store';
 import App from './App';
 import './index.css';
 
-// Contexts import
+import { BrowserRouter as Router } from 'react-router-dom'
 
+
+// Contexts import
 // signin state manager for login and signin setup
 import SignInStateManager from './setup-app/context/login-screen/signin-button-state-context';
 
@@ -17,7 +19,9 @@ root.render(
   <React.StrictMode>
     <SignInStateManager>
       <Provider store={store}>
-        <App />
+        <Router>
+          <App />
+        </Router>
       </Provider>
     </SignInStateManager>
   </React.StrictMode>

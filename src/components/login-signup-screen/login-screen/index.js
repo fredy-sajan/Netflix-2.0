@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 
+
 // CSS import
 import './stylesheet/style.css'
 
 // Context import
 import { signinButtonStateContext } from '../../../setup-app/context/login-screen/signin-button-state-context/index'
-import SignupScreen from '../signup-screen';
+import LoginScreen from '../login-form/index';
+
 
 function LoginScreenBanner() {
 
@@ -33,7 +35,7 @@ function LoginScreenBanner() {
                             </div>
                         </>
                     ) : (
-                        <SignupScreen />
+                        <LoginScreen />
                     )
 
                     }

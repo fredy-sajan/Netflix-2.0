@@ -1,10 +1,12 @@
 // Hooks
 import React, { Suspense, lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // CSS import
 import './App.css';
+import LoginForm from './components/login-signup-screen/login-form';
+import SignupScreen from './components/login-signup-screen/signup-form';
 
 // Redux import
 import { login, logout, selectUser } from './features/userSlice';
@@ -13,16 +15,23 @@ import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase/Firebase';
 
 // ui import
-import LoginScreen from './ui/login-screen';
+import LoginScreen from './ui/login-signup-screen';
 import ProfileScreen from './ui/profile-screen';
 
 // Component's import
 const HomeScreen = lazy(() => import('../src/ui/home-screen/index'))
 
+
+
 function App() {
 
+  // User true/false geting  variable
   const user = useSelector(selectUser);
+
+  // Sending user details to Redux
   const dispatch = useDispatch();
+
+  const navigate = useNavigate()
 
   useEffect(() => {
 
@@ -40,26 +49,48 @@ function App() {
       }
     });
 
+
+    // navigate route path setup on login signup home
+
+
     return unsubscribe;
   }, [])
 
+  function navigateLoginSignupHome() {
+    navigate('/login&signup-home')
+  }
+
+
+// JSX start
   return (
     <div className="App">
 
+      {/* login signup home route setup */}
+      <Routes>
+        <Route path='/login&signup-home' element={<LoginScreen />} />
+        <Route path='/login' element={<LoginScreen />} />
+        <Route path='/signup' element={<SignupScreen />} />
+      </Routes>
+
       {!user ? (
-        <LoginScreen />
+
+        // If user not logged
+        window.addEventListener('load', navigateLoginSignupHome)
+
       ) : (
-        <Router>
-          <Suspense fallback={<div>Loading....</div>}>
-            <Routes>
-              <Route exact path='/' element={<HomeScreen />} />
-              <Route path='/profile' element={<ProfileScreen />} />
-            </Routes>
-          </Suspense>
-        </Router>
+
+        // After login/signup inside route's
+        <Suspense fallback={<div>Loading....</div>}>
+          <Routes>
+            <Route exact path='/' element={<HomeScreen />} />
+            <Route path='/profile' element={<ProfileScreen />} />
+          </Routes>
+        </Suspense >
+
       )
       }
-    </div>
+
+    </div >
   );
 }
 

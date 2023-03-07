@@ -1,0 +1,125 @@
+.signup_container {
+  width: 100%;
+  height: 100vh;
+  background: url("../../../../assets/images/login-background/login-background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+.signup_container .signup_screen_gradient {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 4;
+}
+.signup_container .signup_screen {
+  max-width: 450px;
+  min-width: 450px;
+  min-height: 625px;
+  margin-bottom: 90px;
+  padding: 60px 68px 40px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.79);
+  position: relative;
+  z-index: 5;
+}
+.signup_container .signup_screen form {
+  display: grid;
+  flex-direction: column;
+}
+.signup_container .signup_screen form .signin_text_head {
+  margin-bottom: 35px;
+  font-size: 32px;
+  color: #fff;
+}
+.signup_container .signup_screen form input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-radius: 4px;
+  line-height: 50px;
+  padding: 16px 20px 0;
+}
+.signup_container .signup_screen form input:focus {
+  outline-width: none;
+}
+.signup_container .signup_screen form .signin_password_input {
+  margin-top: 39px;
+}
+.signup_container .signup_screen form .signin_submit_button {
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: #e50914;
+  margin: 50px 0 12px;
+  padding: 16px;
+  border: none;
+}
+.signup_container .signup_screen .extra_details {
+  max-width: 450px;
+  margin-top: 5px;
+}
+.signup_container .signup_screen .extra_details .remember_and_help {
+  display: flex;
+  justify-content: space-between;
+  color: #b3b3b3;
+  font-size: 13px;
+  font-weight: 400;
+}
+.signup_container .signup_screen .extra_details .remember_and_help .remember_text input {
+  accent-color: #0071eb;
+}
+.signup_container .signup_screen .extra_details .remember_and_help .remember_text label {
+  margin-left: 5px;
+}
+.signup_container .signup_screen .extra_details .remember_and_help .need_help {
+  cursor: pointer;
+}
+.signup_container .signup_screen .extra_details .remember_and_help .need_help:hover {
+  text-decoration: underline;
+}
+.signup_container .signup_screen .extra_details .remember_and_help .need_help a {
+  text-decoration: none;
+  color: #b3b3b3;
+}
+.signup_container .signup_screen .extra_details .signup {
+  color: #737373;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 46px;
+  display: flex;
+  justify-content: flex-start;
+}
+.signup_container .signup_screen .extra_details .signup a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 5px;
+  transition: 0.5s;
+  border-bottom: 1px solid transparent;
+}
+.signup_container .signup_screen .extra_details .signup a:hover {
+  border-color: #fff;
+}
+.signup_container .signup_screen .extra_details .information {
+  max-width: 300px;
+  margin-top: 16px;
+  color: #8c8c8c;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+.signup_container .signup_screen .extra_details .information a {
+  text-decoration: none;
+  color: #0071eb;
+}
+.signup_container .signup_screen .extra_details .information a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

@@ -1,30 +1,38 @@
 import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../../../firebase/Firebase';
 
 // CSS import
 import './stylesheet/style.css'
 
-function SignupScreen() {
+function LoginForm() {
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
-    // User Register function
-    const register = (event) => {
-        event.preventDefault();
+    const navigate = useNavigate()
 
-        auth.createUserWithEmailAndPassword(
-            emailRef.current.value,
-            passwordRef.current.value
-        ).then((authUser) => {
-            console.log(`register ${authUser}`)
-        }).catch((error) => {
-            alert(error.message);
-        }).then(() => {
-            emailRef.current.value = "";
-            passwordRef.current.value = "";
-        });
+    const signup = () => {
+        navigate('/signup')
     }
+   
+
+    // User Register function
+    // const register = (event) => {
+    //     event.preventDefault();
+
+    //     auth.createUserWithEmailAndPassword(
+    //         emailRef.current.value,
+    //         passwordRef.current.value
+    //     ).then((authUser) => {
+    //         console.log(`register ${authUser}`)
+    //     }).catch((error) => {
+    //         alert(error.message);
+    //     }).then(() => {
+    //         emailRef.current.value = "";
+    //         passwordRef.current.value = "";
+    //     });
+    // }
 
     const signIn = (event) => {
         event.preventDefault();
@@ -33,7 +41,7 @@ function SignupScreen() {
             emailRef.current.value,
             passwordRef.current.value
         ).then((authUser) => {
-            console.log(`signin ${authUser}`)
+           console.log(authUser)
         })
         .catch((error) => alert(error.message))
     }
@@ -70,8 +78,8 @@ function SignupScreen() {
 
             <div className="signup">
                 New to Netflix?<a 
-                onClick={register}
-                href=''>Sign up now</a>.
+                onClick={signup}
+                >Sign up now</a>.
             </div>
 
             <div className="information">
@@ -85,4 +93,4 @@ function SignupScreen() {
   )
 }
 
-export default SignupScreen
+export default LoginForm
