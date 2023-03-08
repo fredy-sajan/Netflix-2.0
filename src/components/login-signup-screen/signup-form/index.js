@@ -22,8 +22,8 @@ function SignupScreen() {
             passwordRef.current.value
         ).then((authUser) => {
             console.log(`register ${authUser}`)
-            if(authUser){
-                alert("Signup Completed");
+            if (authUser) {
+                alert("Signup Completed, Login to your account");
                 navigate('/login')
             }
         }).catch((error) => {
@@ -64,6 +64,12 @@ function SignupScreen() {
                             <div className="need_help">
                                 <a href='https://www.google.com' onClick={help}>Need help?</a>
                             </div>
+                        </div>
+
+                        <div className="signup">
+                            Already a user?<a
+                                onClick={() => navigate('/login')}
+                            >Sign In now</a>.
                         </div>
 
                         <div className="information">

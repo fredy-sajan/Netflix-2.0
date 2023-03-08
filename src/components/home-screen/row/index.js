@@ -36,9 +36,9 @@ function Row({ title, fetchUrl, isLargeRow = false, img_base_url }) {
                             <div style={{margin: "0", padding: "0"}}>
                                 <img className={`row_poster ${isLargeRow && "row_posterLarge"}`}
                                     src={`${img_base_url}${isLargeRow ? movie?.poster_path :
-                                        movie?.backdrop_path}`} alt="movie-name" key={movie.id}
+                                        movie?.backdrop_path}`} alt="" key={movie.id}
                                 />
-                                {!isLargeRow ? <h3 className='movie_title_name'>{movie ? movie?.title || movie?.name || movie?.original_name : 'Error 404 Data Not Found' }</h3> : null}
+                                {!isLargeRow ? <h3 className='movie_title_name'>{movie && movie.backdrop_path ? movie?.title || movie?.name || movie?.original_name : '' }</h3> : null}
                             </div>
 
                         )

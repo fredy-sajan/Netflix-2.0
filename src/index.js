@@ -17,13 +17,13 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <SignInStateManager>
-      <Provider store={store}>
-        <Router>
-          <App />
-        </Router>
-      </Provider>
-    </SignInStateManager>
+      <SignInStateManager>
+        <Provider store={store}>
+          <Router>
+            <App />
+          </Router>
+        </Provider>
+      </SignInStateManager>
   </React.StrictMode>
 );
 

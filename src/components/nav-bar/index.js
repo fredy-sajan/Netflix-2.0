@@ -46,7 +46,7 @@ function NavBar() {
 
         <div className="netflix_avatar_logo_div">
           <img 
-          onClick={() => navigate('profile')}
+          onClick={() => navigate('/profile')}
           className='netflix_avatar_logo' 
           src={netflixAvatarLogo} alt="Avatar_Logo" />
         </div>

@@ -1,0 +1,38 @@
+.plan_screen {
+
+    .plan_screen_plan {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        opacity: 0.7;
+        transition: all 0.5s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .plan_screen_info {
+
+            h5 {
+                font-size: 20px;
+            }
+
+            h6 {
+                font-size: 15px;
+            }
+
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #e50914;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+    }
+
+}

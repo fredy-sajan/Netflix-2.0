@@ -74,7 +74,7 @@
   display: flex;
   justify-content: flex-start;
 }
-.signup_screen .extra_details .signup a {
+.signup_screen .extra_details .signup span {
   cursor: pointer;
   text-decoration: none;
   color: #fff;
@@ -82,7 +82,7 @@
   transition: 0.5s;
   border-bottom: 1px solid transparent;
 }
-.signup_screen .extra_details .signup a:hover {
+.signup_screen .extra_details .signup span:hover {
   border-color: #fff;
 }
 .signup_screen .extra_details .information {

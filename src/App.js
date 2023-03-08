@@ -3,9 +3,9 @@ import React, { Suspense, lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
+
 // CSS import
 import './App.css';
-import LoginForm from './components/login-signup-screen/login-form';
 import SignupScreen from './components/login-signup-screen/signup-form';
 
 // Redux import
@@ -45,16 +45,12 @@ function App() {
           })
         )
       } else {
-        dispatch(logout)
+        dispatch(logout())
       }
     });
 
-
-    // navigate route path setup on login signup home
-
-
     return unsubscribe;
-  }, [])
+  }, [dispatch])
 
   function navigateLoginSignupHome() {
     navigate('/login&signup-home')
@@ -75,19 +71,18 @@ function App() {
       {!user ? (
 
         // If user not logged
-        window.addEventListener('load', navigateLoginSignupHome)
+        navigateLoginSignupHome()
 
-      ) : (
+      ) :  (
 
-        // After login/signup inside route's
+        // home route's
         <Suspense fallback={<div>Loading....</div>}>
           <Routes>
             <Route exact path='/' element={<HomeScreen />} />
             <Route path='/profile' element={<ProfileScreen />} />
           </Routes>
         </Suspense >
-
-      )
+      ) 
       }
 
     </div >

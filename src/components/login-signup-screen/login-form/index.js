@@ -16,24 +16,7 @@ function LoginForm() {
         navigate('/signup')
     }
    
-
-    // User Register function
-    // const register = (event) => {
-    //     event.preventDefault();
-
-    //     auth.createUserWithEmailAndPassword(
-    //         emailRef.current.value,
-    //         passwordRef.current.value
-    //     ).then((authUser) => {
-    //         console.log(`register ${authUser}`)
-    //     }).catch((error) => {
-    //         alert(error.message);
-    //     }).then(() => {
-    //         emailRef.current.value = "";
-    //         passwordRef.current.value = "";
-    //     });
-    // }
-
+    
     const signIn = (event) => {
         event.preventDefault();
 
@@ -41,7 +24,10 @@ function LoginForm() {
             emailRef.current.value,
             passwordRef.current.value
         ).then((authUser) => {
-           console.log(authUser)
+           if(authUser){
+            alert('Login Successed')
+            navigate('/profile')
+           }
         })
         .catch((error) => alert(error.message))
     }
@@ -77,9 +63,9 @@ function LoginForm() {
             </div>
 
             <div className="signup">
-                New to Netflix?<a 
+                New to Netflix?<span 
                 onClick={signup}
-                >Sign up now</a>.
+                >Sign Up now</span>.
             </div>
 
             <div className="information">
