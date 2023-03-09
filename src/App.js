@@ -52,12 +52,8 @@ function App() {
     return unsubscribe;
   }, [dispatch])
 
-  function navigateLoginSignupHome() {
-    navigate('/login&signup-home')
-  }
 
-
-// JSX start
+  // JSX start
   return (
     <div className="App">
 
@@ -71,9 +67,9 @@ function App() {
       {!user ? (
 
         // If user not logged
-        navigateLoginSignupHome()
+        navigate('/login&signup-home')
 
-      ) :  (
+      ) : (
 
         // home route's
         <Suspense fallback={<div>Loading....</div>}>
@@ -82,7 +78,7 @@ function App() {
             <Route path='/profile' element={<ProfileScreen />} />
           </Routes>
         </Suspense >
-      ) 
+      )
       }
 
     </div >

@@ -36,3 +36,33 @@
     }
 
 }
+
+// Media Queries
+@media only screen and (max-width: 700px) {
+    
+    .plan_screen {
+
+        .plan_screen_plan {
+
+            .plan_screen_info {
+
+                h5 {
+                    font-size: 17px;
+                }
+
+                h6 {
+                    font-size: 12px;
+                }
+
+            }
+
+            button{
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
+        }
+
+    }
+
+}

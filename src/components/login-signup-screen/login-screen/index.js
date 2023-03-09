@@ -21,7 +21,10 @@ function LoginScreenBanner() {
                 <div className="login_screen_texts">
                     {!signinState ? (
                         <>
-                            <h1 className='login_screen_main_text_head'>Unlimited movies, TV shows and more.</h1><h2 className='login_screen_second_text_head'>Watch anywhere. Cancel anytime.</h2><h3 className='login_screen_third_text_head'>Ready to watch? Enter your email to create or restart your membership.</h3><div className="login_screen_input">
+                            <h1 className='login_screen_main_text_head'>Unlimited movies, TV shows and more.</h1>
+                            <h2 className='login_screen_second_text_head'>Watch anywhere. Cancel anytime.</h2>
+                            <h3 className='login_screen_third_text_head'>Ready to watch? Enter your email to create or restart your membership.</h3>
+                            <div className="login_screen_input">
                                 <form onSubmit={(event) => event.preventDefault()}>
                                     <input type="email"
                                         placeholder='Email Address' />

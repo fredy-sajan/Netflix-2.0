@@ -38,12 +38,42 @@
         .netflix_avatar_logo_div{
 
             .netflix_avatar_logo{
+                width: 38px;
+                height: 38px;
                 position: fixed;
                 top: 25px;
                 right: 40px;
-                width: 38px;
-                height: 38px;
                 cursor: pointer;
+            }
+
+        }
+
+    }
+
+}
+
+// Media Queries
+@media only screen and (max-width: 700px) {
+    
+    .nav_bar {
+
+        .nav_contents{
+
+            .netflix_logo_div {
+
+                .netflix_logo{
+                    width: 165px;
+                }
+
+            }
+
+            .netflix_avatar_logo_div {
+
+                .netflix_avatar_logo {
+                    width: 30px;
+                    height: 30px;
+                }
+
             }
 
         }

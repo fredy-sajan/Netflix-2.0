@@ -67,9 +67,9 @@ function SignupScreen() {
                         </div>
 
                         <div className="signup">
-                            Already a user?<a
+                            Already a user?<span
                                 onClick={() => navigate('/login')}
-                            >Sign In now</a>.
+                            >Sign In now</span>.
                         </div>
 
                         <div className="information">

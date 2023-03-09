@@ -59,4 +59,31 @@
   background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
   position: absolute;
   z-index: 2;
+}
+
+@media only screen and (max-width: 700px) {
+  .banner {
+    background-size: cover;
+  }
+  .banner .banner_contents {
+    margin-left: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+  }
+  .banner .banner_contents .banner_title {
+    font-size: 45px;
+    text-align: center;
+  }
+  .banner .banner_contents .banner_buttons {
+    text-align: center;
+  }
+  .banner .banner_contents .banner_description {
+    text-align: center;
+    padding: 0 16px;
+    width: 100%;
+    height: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */

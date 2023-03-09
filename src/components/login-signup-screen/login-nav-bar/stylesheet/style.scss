@@ -47,3 +47,30 @@
     }
 
 }
+
+// Media Queries
+@media only screen and (max-width: 700px) {
+    
+    .login_nav_bar{
+
+       .login_nav_bar_background {
+
+        .login_screen_logo {
+            width: 150px;
+        }
+
+        .language_selection {
+            text-align: center;
+            margin: 39px auto;
+        }
+
+        .login_screen_signin_button {
+            text-align: center;
+            margin: 39px auto;
+        }
+
+       }
+        
+    }
+
+}

@@ -135,3 +135,27 @@
     }
 
 }
+
+// Media Queries
+@media only screen and (max-width: 700px) {
+    
+    .signup_screen {
+        min-width: unset;
+        min-height: unset;
+        padding: 25px;
+
+        form {
+
+            .signin_text_head {
+                font-size: 35px;
+            }
+
+            input{
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}

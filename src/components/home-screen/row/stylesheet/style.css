@@ -53,4 +53,20 @@
   font-size: 16px;
   font-weight: 300;
   text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .row {
+    padding: 0 16px;
+  }
+  .row .row_posters .row_poster {
+    width: 250px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .row .row_posters .row_posterLarge {
+    width: 180px;
+    height: 230px;
+  }
 }/*# sourceMappingURL=style.css.map */
